@@ -14,10 +14,8 @@ export function NavBar () {
       </div>
     </div>
     <div className={styles.navLeftCont}>
-      <Link href='/shop'>
-        <p className={styles.NavBarItemsTXT}>
-          Works
-        </p>
+      <Link href='/shop' className={styles.NavBarItemsTXT}>
+        Works
       </Link>
       <p className={styles.NavBarItemsTXT}>About</p>
       <div className={styles.cartIconCont}>
