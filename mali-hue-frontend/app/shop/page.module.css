@@ -1,0 +1,8 @@
+.ItemCardSpace {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    gap: 92px;
+    justify-content: center;
+    align-items: center;
+}

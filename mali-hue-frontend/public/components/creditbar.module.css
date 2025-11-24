@@ -1,0 +1,145 @@
+.CreditBarSpace {
+    width: 100%;
+    height: 355px;
+    background-color: #ededed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.CreditBar{
+    height: 155px;
+    width: 1730px;
+    background-color: #D9D9D9;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 36px;
+    border: none;
+    border-radius: 40px;
+}
+
+.RightCont {
+    display: flex;
+    flex-direction: row;
+}
+
+.CreditBarTXT{
+    margin-left: 10px;
+    color: black;
+    margin-right: 5px;
+}
+
+.CreditUsername {
+    color: black;
+}
+
+.RealNameAuthor {
+    font-size: 24px;
+    color: black;
+    opacity: 0.41;
+    margin-left: 10px;
+    padding-top: 6px;
+}
+
+.CopyrightIcon { 
+    margin-left: 50px;
+}
+
+.LeftCont {
+    flex-direction: left;
+    color: black;
+}
+
+.CompTag {
+    margin-right: 50px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 640px) {
+    .CreditBarSpace {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .CreditBar {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .RightCont {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .LeftCont {
+        text-align: center;
+    }
+    
+    .CreditBarTXT {
+        font-size: 14px;
+        margin-left: 0;
+    }
+    
+    .CreditUsername {
+        font-size: 14px;
+    }
+    
+    .RealNameAuthor {
+        font-size: 12px;
+    }
+    
+    .CopyrightIcon {
+        width: 30px;
+        height: 30px;
+        margin-left: 0;
+    }
+    
+    .CompTag {
+        font-size: 14px;
+        margin-right: 0;
+    }
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 641px) and (max-width: 1023px) {
+    .CreditBarSpace {
+        height: auto;
+        padding: 30px;
+    }
+    
+    .CreditBar {
+        width: 90%;
+        max-width: 1200px;
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+        padding: 30px;
+    }
+    
+    .RightCont {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .CreditBarTXT {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1500px) and (max-width:1919) {
+    .CreditBar{
+        scale: 0.9;
+    }
+    
+}

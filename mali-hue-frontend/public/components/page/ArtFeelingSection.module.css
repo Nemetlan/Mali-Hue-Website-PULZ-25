@@ -1,0 +1,123 @@
+:root {
+  --light-gray: #ededed;
+  --text-color: #000;
+  --max-width: 80rem; 
+}
+
+/* --- Section Container --- */
+.sectionContainer {
+    width: 100%;
+    background-color: var(--light-gray);
+    padding: 5rem 1rem; /* Base padding for mobile */
+}
+
+.contentWrapper {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* --- Main Heading Styles --- */
+.headingContainer {
+    color: var(--text-color);
+    font-family: Arial, sans-serif; /* Fallback for sans-serif */
+    font-weight: 300; /* Light weight */
+    line-height: 1.2;
+    font-size: 3rem; /* Base size for mobile (e.g., 48px) */
+}
+
+.textLine {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Black Box Style (ART and Feeling) --- */
+.blackBox {
+    background-color: var(--text-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    position: relative;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: 15px;
+    /* Ensure the text inside doesn't wrap inside the box if possible */
+    white-space: nowrap; 
+}
+
+
+.normalText {
+    /* To ensure normal text aligns with the black boxes */
+    font-size: 64px;
+    margin-top: 0.25rem;
+}
+
+/* --- Quote/Description Style --- */
+.quote {
+    max-width: 40rem;
+    margin-top: 1rem;
+    font-size: 32px; /* Base size 18px */
+    line-height: 1.6;
+    color: black;
+}
+
+
+/* --- Responsive Design (Media Queries) --- */
+
+/* Small screens (e.g., mobile, sm in Tailwind) */
+@media (max-width: 640px) {
+    .sectionContainer {
+        padding: 2rem 1rem;
+    }
+    
+    .headingContainer {
+        font-size: 1.75rem; /* Smaller for mobile */
+    }
+    
+    .serifText {
+        font-size: 1.5rem;
+    }
+    
+    .blackBox {
+        margin-right: 0.5rem;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    .normalText {
+        font-size: 28px;
+    }
+    
+    .quote {
+        font-size: 18px;
+        max-width: 100%;
+    }
+}
+
+/* Medium screens (e.g., tablets, md in Tailwind) */
+@media (min-width: 768px) {
+    .sectionContainer {
+        padding: 8rem 2rem;
+    }
+    .headingContainer {
+        font-size: 4.5rem; /* Larger than mobile */
+    }
+    .serifText {
+        font-size: 6rem; /* Larger text inside boxes */
+    }
+}
+
+/* Large screens (e.g., desktops, lg/xl in Tailwind) */
+@media (min-width: 1024px) {
+    .headingContainer {
+        font-size: 6rem; /* Even larger */
+    }
+    .serifText {
+        font-size: 7.5rem; /* Max size for text inside boxes */
+    }
+    .quote {
+        font-size: 1.25rem;
+    }
+}

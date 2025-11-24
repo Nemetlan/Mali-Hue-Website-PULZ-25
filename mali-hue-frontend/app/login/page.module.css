@@ -1,0 +1,87 @@
+.page {
+    width: 100%;
+    height: 100vh;
+    background-color: #ededed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.loginContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+    padding: 120px 120px 120px 120px;
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 50px;
+
+}
+
+.ContactTitle {
+    font-size: 128px;
+    max-width: 501px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.contactCardColumn2{
+    margin-left: 100px;
+}
+
+.contactCardDesTitleTXT {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 640px;
+}
+
+.formInput{
+    height: 60px;
+    border: 3px solid rgb(93, 93, 93);
+    border-radius: 40px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-size: 28px;
+    background-color: #ededed;
+    padding-left: 50px;
+    color: black;
+}
+.formInput::placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+.formInput:hover{
+    border-color: black;
+}
+
+
+.formSubmitBtn {
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+.formSubmitBtn:hover {
+    opacity: 0.8;
+    color: white;
+    cursor: pointer;
+}
+
+.formSubmitBtn:active {
+    opacity: 0.5;
+    color: white;
+    cursor: pointer;
+}

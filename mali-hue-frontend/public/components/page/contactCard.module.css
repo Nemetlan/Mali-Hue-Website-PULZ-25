@@ -1,0 +1,210 @@
+.contactCardSpace {
+    width: 100%;
+    height: 854px;
+    background-color: #ededed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: -100px;
+    /* margin-left: 70px; */
+}
+
+.contactCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+    padding: 120px 120px 120px 120px;
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 50px;
+
+}
+
+.ContactTitle {
+    font-size: 128px;
+    max-width: 501px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 20px;
+}
+.socialIcon {
+    width: 35px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+.SingleLine {
+    background-color: black;
+    height: 2px;
+}
+
+.socialTextTXT {
+    font-size: 24px;
+    color: black;
+    margin-top: 10px;
+}
+
+.contactCardColumn2{
+    margin-left: 250px;
+}
+
+.contactCardDesTitleTXT {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.desText {
+    font-size: 24px;
+    max-width: 750px;
+    margin-bottom: 25px;
+}
+
+.Contactform {
+    display: flex;
+    flex-direction: column;
+    max-width: 640px;
+}
+
+.formInput{
+    height: 60px;
+    border: 3px solid rgb(93, 93, 93);
+    border-radius: 40px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-size: 28px;
+    background-color: #ededed;
+    padding-left: 50px;
+    color: black;
+}
+.formInput::placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+.formInput:hover{
+    border-color: black;
+}
+
+
+.formSubmitBtn {
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+.formSubmitBtn:hover {
+    opacity: 0.8;
+    color: white;
+    cursor: pointer;
+}
+
+.formSubmitBtn:active {
+    opacity: 0.5;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 640px) {
+    .contactCardSpace {
+        height: auto;
+        padding: 20px;
+        margin-bottom: 0;
+    }
+    
+    .contactCard {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    
+    .contactCardColumn1 {
+        width: 100%;
+    }
+    
+    .contactCardColumn2 {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .ContactTitle {
+        font-size: 48px;
+        max-width: 100%;
+    }
+    
+    .socialIcon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .socialTextTXT {
+        font-size: 16px;
+    }
+    
+    .contactCardDesTitleTXT {
+        font-size: 28px;
+    }
+    
+    .desText {
+        font-size: 16px;
+        max-width: 100%;
+    }
+    
+    .formInput {
+        height: 50px;
+        font-size: 16px;
+        padding-left: 30px;
+    }
+    
+    .formSubmitBtn {
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 641px) and (max-width: 1023px) {
+    .contactCardSpace {
+        height: auto;
+        padding: 30px;
+    }
+    
+    .contactCard {
+        flex-direction: column;
+        padding: 60px 40px;
+        gap: 40px;
+    }
+    
+    .contactCardColumn2 {
+        margin-left: 0;
+    }
+    
+    .ContactTitle {
+        font-size: 80px;
+    }
+    
+    .contactCardDesTitleTXT {
+        font-size: 36px;
+    }
+    
+    .desText {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1500px) and (max-width:1919) {
+    .contactCard{
+        scale: 0.8;
+    }
+    
+}

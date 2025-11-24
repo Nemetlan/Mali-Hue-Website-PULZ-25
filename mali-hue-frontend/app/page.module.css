@@ -1,0 +1,178 @@
+.introSection {
+    width: 100%;
+    height: 854px;
+    background-color: #ededed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 150px;
+    margin-top: 100px;
+
+}
+
+.FisrtImageItem{
+    margin-left: 100px;
+    margin-top: 150px;
+}
+
+.FisrtImageItemPNG {
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+.imageCaption {
+  color: black;
+  margin-left: 25px;
+  margin-top: 20px;
+  font-size: 32px;
+}
+
+.imageCaptionDes {
+  color: black;
+  max-width: 640px;
+  margin-left: 25px;
+  margin-top: 5px;
+  font-size: 24px;
+  opacity: 0.8;
+}
+
+.fewImageItem {
+      width: 100%;
+    height: 854px;
+    background-color: #ededed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 150px;
+    margin-top: 100px;
+}
+
+.ThirdImageItemPNG {
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    margin-top: 100px;
+}
+
+.TwoImageItemPNG {
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    margin-top: -250px;
+}
+
+
+/* Mobile Responsive Design */
+@media (max-width: 640px) {
+    .introSection {
+        height: auto;
+        flex-direction: column;
+        margin-bottom: 80px;
+        margin-top: 50px;
+        padding: 20px;
+    }
+    
+    .introSecLeft {
+        width: 100%;
+    }
+    
+    .introSecRight {
+        width: 100%;
+        margin-top: 40px;
+    }
+    
+    .FisrtImageItem {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    
+    .FisrtImageItemPNG {
+        border-radius: 30px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    
+    .imageCaption {
+        font-size: 18px;
+        margin-left: 15px;
+        margin-top: 12px;
+    }
+    
+    .imageCaptionDes {
+        font-size: 14px;
+        margin-left: 15px;
+        max-width: 100%;
+    }
+    
+    .fewImageSection {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 80px;
+        padding: 20px;
+    }
+    
+    .ThirdImageItemPNG {
+        margin-top: 20px;
+        border-radius: 30px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    
+    .TwoImageItemPNG {
+        margin-top: 20px;
+        border-radius: 30px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 641px) and (max-width: 1023px) {
+    .introSection {
+        height: auto;
+        flex-direction: column;
+        margin-bottom: 120px;
+        margin-top: 80px;
+        padding: 30px;
+    }
+    
+    .FisrtImageItem {
+        margin-left: 50px;
+        margin-top: 100px;
+    }
+    
+    .imageCaption {
+        font-size: 24px;
+    }
+    
+    .imageCaptionDes {
+        font-size: 18px;
+    }
+    
+    .fewImageSection {
+        flex-direction: column;
+        height: auto;
+        padding: 30px;
+    }
+    
+    .ThirdImageItemPNG {
+        margin-top: 40px;
+    }
+    
+    .TwoImageItemPNG {
+        margin-top: 0;
+    }
+}
+
+
+@media (min-width: 1500px) and (max-width:1919) {
+    .fewImageSection{
+        scale: 0.7;
+    }
+
+    .introSection{
+        scale: 0.9;
+        margin-top: -25;
+    }
+    
+}
