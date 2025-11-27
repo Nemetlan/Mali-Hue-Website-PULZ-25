@@ -60,7 +60,7 @@
 }
 
 /* Mobile Responsive Design */
-@media (max-width: 640px) {
+@media (max-width: 720px) {
     .CreditBarSpace {
         height: auto;
         padding: 20px;

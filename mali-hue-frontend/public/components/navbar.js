@@ -17,8 +17,8 @@ export function NavBar () {
       <Link href='/shop' className={styles.NavBarItemsTXT}>
         Works
       </Link>
-      <p className={styles.NavBarItemsTXT}>About</p>
-      <div className={styles.cartIconCont}>
+      <Link href='/about' className={styles.NavBarItemsTXT}>About</Link>
+      <Link href='/cart' className={styles.cartIconCont}>
         <Image
           src="/icon/basket.svg"
           alt="Cart Icon"
@@ -26,7 +26,7 @@ export function NavBar () {
           height={45}
           className={styles.cartIcon}
         />
-      </div>
+      </Link>
       <div className={styles.ContactUsCont}>
         <a href='#contact'><p className={`${styles.ContactusBTN} ${styles.NavBarItemsTXT}`}>Contact</p></a>
       </div>
