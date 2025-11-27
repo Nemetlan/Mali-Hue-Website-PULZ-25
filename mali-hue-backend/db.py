@@ -13,6 +13,7 @@ class Database():
         self.orders = TinyDB('data/orders/orders.json')
 
     def get_semi_products(self):
+        print(self.semi_products.all())
         return self.semi_products.all()
     
     def get_product(self, product_id):

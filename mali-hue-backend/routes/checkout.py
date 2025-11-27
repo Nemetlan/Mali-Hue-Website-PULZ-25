@@ -1,7 +1,7 @@
 import time
 import random
 from flask import Blueprint, request, jsonify
-from db import products_collection, orders_collection
+# from db import products_collection, orders_collection
 from bson import ObjectId
 from datetime import datetime
 

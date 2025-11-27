@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 from bson import ObjectId
 import json
+from db import Database
 
 # A custom JSON encoder to handle MongoDB's ObjectId
 class CustomJSONEncoder(json.JSONEncoder):
@@ -41,6 +42,6 @@ def create_app():
     return app
 
 if __name__ == "__main__":
-    import db
+    import dbMap  # Ensure database is initialized
     app = create_app()
     app.run(debug=True)

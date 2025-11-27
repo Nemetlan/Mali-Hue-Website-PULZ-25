@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from db import products_collection, orders_collection
+# from db import products_collection, orders_collection
 from datetime import datetime, time
 from bson import ObjectId
 import json
