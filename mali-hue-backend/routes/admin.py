@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
 # from db import products_collection, orders_collection
+from dbMap import database
 from datetime import datetime, time
 from bson import ObjectId
 import json
@@ -52,10 +53,10 @@ def get_admin_dashboard():
             }
         ]
 
-        result = list(orders_collection.aggregate(pipeline))
+        result = list(database.get_orders())
         
         # Count active products in a separate query
-        active_products_count = products_collection.count_documents({})
+        active_products_count = len(database.get_products())
 
         if not result:
             # Handle case with no orders
@@ -110,8 +111,7 @@ def add_new_product():
             return jsonify({"error": "Bad Request: Each variant must have 'size' and 'price'"}), 400
 
     try:
-        result = products_collection.insert_one(data)
-        new_product_id = result.inserted_id
-        return jsonify({"message": "Product added successfully", "product_id": str(new_product_id)}), 201
+        database.add_product(data)
+        return jsonify({"message": "Product added successfully"}), 201
     except Exception as e:
         return jsonify({"error": "Failed to add product", "details": str(e)}), 500

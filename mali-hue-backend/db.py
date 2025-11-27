@@ -3,23 +3,47 @@ import os
 
 class Database():
     def __init__(self):
-        for dir in ['data', 'data/semi_products', 'data/products', 'data/orders']:
+        for dir in ['./mali-hue-backend/data', './mali-hue-backend/data/semi_products', './mali-hue-backend/data/products', './mali-hue-backend/data/orders']:
             if not os.path.exists(dir):
                 os.makedirs(dir)
 
         print("Initializing database...")
-        self.semi_products = TinyDB('data/semi_products/semiProducts.json')
-        self.products = TinyDB('data/products/products.json')
-        self.orders = TinyDB('data/orders/orders.json')
+        self.semi_products = TinyDB('./mali-hue-backend/data/semi_products/semiProducts.json')
+        self.products = TinyDB('./mali-hue-backend/data/products/products.json')
+        self.orders = TinyDB('./mali-hue-backend/data/orders/orders.json')
 
+
+        self.db_flush()
+        # Initialize with sample data if empty
+        self._init_sample_data()
+
+    def db_flush(self):
+        self.semi_products.truncate()
+        self.products.truncate()
+        self.orders.truncate()
+
+    def _init_sample_data(self):
+        """Initialize databases with sample data if empty"""
+        if len(self.products.all()) == 0:
+            print("Populating products database...")
+            for product in PRODUCTS0:
+                self.products.insert(product)
+        
+        if len(self.semi_products.all()) == 0:
+            print("Populating semi_products database...")
+            for semi in SEMI_PRODUCTS0:
+                self.semi_products.insert(semi)
+    
     def get_semi_products(self):
-        print(self.semi_products.all())
         return self.semi_products.all()
     
     def get_product(self, product_id):
         productData = Query()
         result = self.products.search(productData.id == product_id)
         return result[0] if result else None
+    
+    def get_products(self):
+        return self.products.all()
     
     def add_order(self, order_data):
         self.orders.insert(order_data)
@@ -28,19 +52,43 @@ class Database():
         return self.orders.all()  
     
     def add_product(self, product_data):
+        print('semi_data')
         self.products.insert(product_data)
-        tempdata = {
-        "id": product_data["id"],
-        "title": product_data["title"],
-        "artist": product_data["artist"],
-        "short_description": product_data["short_description"],
-        "thumbnail": product_data["thumbnail"],
-        "variants": product_data["variants"],
-        "lowest_price": product_data["lowest_price"]
+        # Also insert to semi_products if needed
+        semi_data = {
+            "id": product_data.get("id"),
+            "title": product_data.get("title"),
+            "artist": product_data.get("artist"),
+            "short_description": product_data.get("short_description"),
+            "thumbnail": product_data.get("thumbnail"),
+            "variants": product_data.get("variants"),
+            "lowest_price": product_data.get("lowest_price")
         }
-        print(self.semi_products.insert(tempdata))
+        
+        self.semi_products.insert(semi_data)
 
 # Sample Products Data
+SEMI_PRODUCTS0 = [
+        {
+        "id": "1",
+        "title": "Timeless Bark",
+        "artist": "Nemetlan",
+        "short_description": "Evokes natural resilience and enduring beauty.",
+        "thumbnail": "/photos/id/1.png",
+        "variants": [{"size": "12x16\"", "price": 85}, {"size": "18x24\"", "price": 150}],
+        "lowest_price": 85
+    },
+    {
+        "id": "2",
+        "title": "Quiet Resolve",
+        "artist": "Nemetlan",
+        "short_description": "Emphasizes inner strength and peaceful determination.",
+        "thumbnail": "/photos/id/2.png",
+        "variants": [{"size": "24x36\"", "price": 300}],
+        "lowest_price": 300
+    }]
+
+
 SEMI_PRODUCTS = [
         {
         "id": "1",
@@ -79,6 +127,33 @@ SEMI_PRODUCTS = [
         "lowest_price": 95
     }
 ]
+
+
+PRODUCTS0 = [
+    {
+        "id": "1",
+        "title": "Timeless Bark",
+        "artist": "Nemetlan",
+        "short_description": "Evokes natural resilience and enduring beauty.",
+        "description": "Raw, monochromatic texture that anchors your space in lasting calm and quiet strength. This piece explores the intricate details of nature that often go unnoticed.",
+        "thumbnail": "/photos/id/1.png",
+        "category": "Digital",
+        "stock": 10,
+        "variants": [{"size": "12x16\"", "price": 85}, {"size": "18x24\"", "price": 150}],
+        "lowest_price": 85
+    },
+    {
+        "id": "2",
+        "title": "Quiet Resolve",
+        "artist": "Nemetlan",
+        "short_description": "Emphasizes inner strength and peaceful determination.",
+        "description": "A study in contrast and solitude. The figure stands resilient against a dark, brooding background, illuminated by a single source of hope.",
+        "thumbnail": "/photos/id/2.png",
+        "category": "Oil",
+        "stock": 5,
+        "variants": [{"size": "24x36\"", "price": 300}],
+        "lowest_price": 300
+    }]
 
 
 PRODUCTS = [
@@ -131,3 +206,4 @@ PRODUCTS = [
         "lowest_price": 95
     }
 ]
+
