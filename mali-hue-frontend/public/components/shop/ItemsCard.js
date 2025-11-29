@@ -4,7 +4,7 @@ import styles from './ItemsCard.module.css';
 import Image from 'next/image';
 
 
-export function ItemsCard({itemImage, itemTitle, itemPrice, itemDes}) {
+export function ItemsCard({key, itemImage, itemTitle, itemPrice, itemDes}) {
     let img_path = `${itemImage}`;
 
     return (

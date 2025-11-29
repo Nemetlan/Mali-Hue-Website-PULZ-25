@@ -19,7 +19,7 @@ export default async function Home() {
       <main className={styles.main}>
         <div className={styles.ItemCardSpace}>
           {products.map((product) => (
-            <ItemsCard key={product.id} itemTitle={product.title} itemPrice={product.lowest_price} itemImage={product.thumbnail} itemDes={product.short_description} />
+            <ItemsCard key={product.id} itemTitle={product.title} itemPrice={product.lowest_price} itemImage={product.thumbnail} itemDes={product.short_description}/>
           ))}
         </div>
 
