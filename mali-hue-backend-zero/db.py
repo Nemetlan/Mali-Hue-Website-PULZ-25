@@ -12,6 +12,7 @@ class Database():
         self.products = TinyDB('./data/products/products.json')
         self.orders = TinyDB('./data/orders/orders.json')
 
+        self.db_flush()
 
         # Initialize with sample data if empty
         self._init_sample_data()
@@ -74,7 +75,7 @@ SEMI_PRODUCTS0 = [
         "title": "Timeless Bark",
         "artist": "Nemetlan",
         "short_description": "Evokes natural resilience and enduring beauty.",
-        "thumbnail": "/photos/id/1.png",
+        "thumbnail": "/item_thumbnails/1.png",
         "variants": [{"size": "12x16\"", "price": 85}, {"size": "18x24\"", "price": 150}],
         "lowest_price": 85
     },
@@ -83,7 +84,7 @@ SEMI_PRODUCTS0 = [
         "title": "Quiet Resolve",
         "artist": "Nemetlan",
         "short_description": "Emphasizes inner strength and peaceful determination.",
-        "thumbnail": "/photos/id/2.png",
+        "thumbnail": "/item_thumbnails/2.png",
         "variants": [{"size": "24x36\"", "price": 300}],
         "lowest_price": 300
     }]
@@ -95,7 +96,7 @@ SEMI_PRODUCTS = [
         "title": "Timeless Bark",
         "artist": "Nemetlan",
         "short_description": "Evokes natural resilience and enduring beauty.",
-        "thumbnail": "/photos/id/1.png",
+        "thumbnail": "/item_thumbnails/1.png",
         "variants": [{"size": "12x16\"", "price": 85}, {"size": "18x24\"", "price": 150}],
         "lowest_price": 85
     },
@@ -104,7 +105,7 @@ SEMI_PRODUCTS = [
         "title": "Quiet Resolve",
         "artist": "Nemetlan",
         "short_description": "Emphasizes inner strength and peaceful determination.",
-        "thumbnail": "/photos/id/2.png",
+        "thumbnail": "/item_thumbnails/2.png",
         "variants": [{"size": "24x36\"", "price": 300}],
         "lowest_price": 300
     },
@@ -113,7 +114,7 @@ SEMI_PRODUCTS = [
         "title": "Ethereal Swirl",
         "artist": "Nemetlan",
         "short_description": "Focuses on the dreamy, almost ghostly quality of movement.",
-        "thumbnail": "/photos/id/3.png",
+        "thumbnail": "/item_thumbnails/3.png",
         "variants": [{"size": "12x16\"", "price": 120}, {"size": "16x20\"", "price": 180}],
         "lowest_price": 120
     },
@@ -122,7 +123,7 @@ SEMI_PRODUCTS = [
         "title": "Urban Solitude",
         "artist": "Nemetlan",
         "short_description": "The silence of the city at dawn.",
-        "thumbnail": "/photos/id/4.png",
+        "thumbnail": "/item_thumbnails/4.png",
         "variants": [{"size": "12x16\"", "price": 95}],
         "lowest_price": 95
     }
@@ -136,7 +137,7 @@ PRODUCTS0 = [
         "artist": "Nemetlan",
         "short_description": "Evokes natural resilience and enduring beauty.",
         "description": "Raw, monochromatic texture that anchors your space in lasting calm and quiet strength. This piece explores the intricate details of nature that often go unnoticed.",
-        "thumbnail": "/photos/id/1.png",
+        "thumbnail": "/item_thumbnails/1.png",
         "category": "Digital",
         "stock": 10,
         "variants": [{"size": "12x16\"", "price": 85}, {"size": "18x24\"", "price": 150}],
@@ -148,7 +149,7 @@ PRODUCTS0 = [
         "artist": "Nemetlan",
         "short_description": "Emphasizes inner strength and peaceful determination.",
         "description": "A study in contrast and solitude. The figure stands resilient against a dark, brooding background, illuminated by a single source of hope.",
-        "thumbnail": "/photos/id/2.png",
+        "thumbnail": "/item_thumbnails/2.png",
         "category": "Oil",
         "stock": 5,
         "variants": [{"size": "24x36\"", "price": 300}],
@@ -163,7 +164,7 @@ PRODUCTS = [
         "artist": "Nemetlan",
         "short_description": "Evokes natural resilience and enduring beauty.",
         "description": "Raw, monochromatic texture that anchors your space in lasting calm and quiet strength. This piece explores the intricate details of nature that often go unnoticed.",
-        "thumbnail": "/photos/id/1.png",
+        "thumbnail": "/item_thumbnails/1.png",
         "category": "Digital",
         "stock": 10,
         "variants": [{"size": "12x16\"", "price": 85}, {"size": "18x24\"", "price": 150}],
@@ -175,7 +176,7 @@ PRODUCTS = [
         "artist": "Nemetlan",
         "short_description": "Emphasizes inner strength and peaceful determination.",
         "description": "A study in contrast and solitude. The figure stands resilient against a dark, brooding background, illuminated by a single source of hope.",
-        "thumbnail": "/photos/id/2.png",
+        "thumbnail": "/item_thumbnails/2.png",
         "category": "Oil",
         "stock": 5,
         "variants": [{"size": "24x36\"", "price": 300}],
@@ -187,7 +188,7 @@ PRODUCTS = [
         "artist": "Nemetlan",
         "short_description": "Focuses on the dreamy, almost ghostly quality of movement.",
         "description": "Soft strokes and blending colors create a sense of motion that is both calming and invigorating. Perfect for modern minimalist spaces.",
-        "thumbnail": "/photos/id/3.png",
+        "thumbnail": "/item_thumbnails/3.png",
         "category": "Acrylic",
         "stock": 8,
         "variants": [{"size": "12x16\"", "price": 120}, {"size": "16x20\"", "price": 180}],
@@ -199,7 +200,7 @@ PRODUCTS = [
         "artist": "Nemetlan",
         "short_description": "The silence of the city at dawn.",
         "description": "Capturing the moments before the city wakes up. Grey tones mixed with the warmth of the rising sun.",
-        "thumbnail": "/photos/id/4.png",
+        "thumbnail": "/item_thumbnails/4.png",
         "category": "Digital",
         "stock": 12,
         "variants": [{"size": "12x16\"", "price": 95}],

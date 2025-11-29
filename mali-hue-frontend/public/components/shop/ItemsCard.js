@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 
 export function ItemsCard({itemImage, itemTitle, itemPrice, itemDes}) {
-    let img_path = `/item_thumbnails/${itemImage}`;
+    let img_path = `${itemImage}`;
 
     return (
     <div className={styles.cardContainer}>

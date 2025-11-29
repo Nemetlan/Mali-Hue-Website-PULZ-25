@@ -112,3 +112,9 @@
     }
 }
 
+
+.cardContainer:hover {
+    --scale-value: 1.0;
+    scale: calc(1.02);
+    opacity: 0.9;
+}

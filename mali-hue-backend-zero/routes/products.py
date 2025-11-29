@@ -13,7 +13,7 @@ def get_products():
     """
     try:
         products = database.get_semi_products()
-        print(products)
+        # print(products)
         return jsonify(products)
     except Exception as e:
         print(f"Error fetching products: {e}")

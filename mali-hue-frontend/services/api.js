@@ -23,14 +23,7 @@ export const api = {
 
 
 function getProducts() {
-  fetch(`${process.env.API_URL}/products`)
-    .then(response => response.json())
-    .then(data => {
-      console.log('Products:', data);
-    })
-    .catch(error => {
-      console.error('Error fetching products:', error);
-    });
+  return fetch(`${process.env.API_URL}/products`).then(response => response.json());
 }
 
 export default getProducts;
