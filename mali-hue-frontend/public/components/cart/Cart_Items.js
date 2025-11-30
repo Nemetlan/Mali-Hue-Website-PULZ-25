@@ -1,20 +1,16 @@
 'use client';
 
+import styles from "@/public/components/cart/cartItems.module.css"
 import CartItem from "@/public/components/cart/cartItem";
-import { getItemsFromCart } from "@/services/cart";
 
-
-
-
-export function CartItems() {
-    const cartItems = getItemsFromCart();
-    console.log(cartItems);
+export function CartItems({ items }) {
 
     return (
-        <div>
+        <div className={styles.CartItems}>
             {
-                cartItems.map(item => {
-                    return <CartItem key={item.itemID} itemID={item.itemID} price={item.price} />
+                items.map(item => {
+                    // Assuming getProductById exists and works as intended
+                    return <CartItem key={item.itemID} itemID={item.itemID} item={item} />
                 })
             } 
         </div>

@@ -1,44 +1,34 @@
 import styles from "./cartItem.module.css";
-import { getProductById } from "@/services/api";
 import Image from "next/image";
-import { getItemsFromCart } from "@/services/cart";
 
-
-
-
-export default function CartItem(itemID, price) {
-
-    const product = getProductById(itemID, price);
-
+export default function CartItem({ item, ...props }) {
     const {
-      thumbnail: productThumbnail,
-      category: productCategory,
-      short_description: productDescription,
-      artist: productArtist,
-      variants: productVarients,
-      title: productTitle
-    } = product;
+        thumbnail: productThumbnail,
+        title: productTitle,
+        short_description: productDescription,
+        artist: productArtist,
+    } = item;
 
     return (
-        <div>
-            <div className={styles.itemContainer}>
-                <div className={styles.itemThumbnail}>
+        <div className={styles.item} {...props}>
+            <div className={styles.thumb}>
+                {productThumbnail && (
                     <Image
+                        className={styles.img}
                         src={productThumbnail}
                         alt={productTitle}
-                        width={50}
-                        height={50}
+                        width={120}
+                        height={120}
                     />
-                </div>
-                <div className={styles.itemInfo}>
-                    <p className={styles.itemTitle}>{productTitle}</p>
-                    <p className={styles.itemDescription}>{productDescription}</p>
-                    <p className={styles.itemArtist}>{productArtist}</p>
-                </div>
-                <div className={styles.itemVarient}></div>
-                <div className={styles.itemRemoveButton}></div>
+                ) && console.log(productThumbnail)}
+            </div>
+            <div className={styles.meta}>
+                <span className={styles.name}>{productTitle}</span>
+                <span className={styles.price}>${item.price.toFixed(2)}</span>
+            </div>
+            <div className={styles.subtotal}>
+                ${(item.price * item.quantity).toFixed(2)}
             </div>
         </div>
     );
 }
-

@@ -6,15 +6,14 @@ function Add2Cart(itemID, price) {
 
 
     if (existingItemIndex >= 0) {
-        // cart[existingItemIndex].quantity += 1; 
+        cart[existingItemIndex].quantity += 1; 
         console.log(cart);
-        return false;  
     } else {
         console.log("addeing");
-        cart.push({ itemID, price });
-        return true;
+        cart.push({ itemID, price, quantity: 1 });
     }
   localStorage.setItem('cart', JSON.stringify(cart));
+  return true;
 }
 
 
@@ -31,5 +30,3 @@ export function getItemsFromCart() {
 
 
 export default Add2Cart;
-
-

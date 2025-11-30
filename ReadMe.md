@@ -21,45 +21,14 @@ This section outlines the primary technologies used in the project's architectur
   * **Backendend Frameworks:** *Flask*
   * **Languages:** HTML5, CSS3, JavaScript ES6+, Python
   * **Styling:** *Tailwind CSS,Plain CSS*
-  * **Hosting:** *Vercel*
-  * **Other Libraries:** *[List any external libraries or tools, e.g., "AOS for animations," "Axios for API calls."]*
-
------
-
-## 🚀 Getting Started
-
-Follow these steps to set up and run the project locally.
-
-### Prerequisites
-
-You need a modern web browser and Node.js (if using a framework like React or Vue).
-
-### Installation
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [Your GitHub Repository Link Here]
-    cd [Your Project Folder Name]
-    ```
-2.  **Install dependencies (if applicable):**
-    ```bash
-    npm install
-    # or
-    yarn install
-    ```
-3.  **Run the development server:**
-    ```bash
-    npm start
-    # or
-    npm run dev
-    ```
+  * **Hosting:** *Frontend => Vercel and Backend => self-Hosted * 
 
 -----
 
 ## 🔗 Project Links
 
-  * **Hosted Link (Demo):** `[Insert Live Hosted URL Here]`
-  * **GitHub Repository:** `[Insert GitHub Repository URL Here]`
+  * **Hosted Link (Demo):** `https://mali-hue-website-pulz-25.vercel.app/`
+
 
 -----
 
