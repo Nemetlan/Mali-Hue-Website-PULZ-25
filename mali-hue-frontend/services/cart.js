@@ -24,6 +24,12 @@ export function RemoveFromCart(itemID) {
   localStorage.setItem('cart', JSON.stringify(cart));
 }
 
+
+export function getItemsFromCart() {
+  return JSON.parse(localStorage.getItem('cart')) || [];
+}
+
+
 export default Add2Cart;
 
 
