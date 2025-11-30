@@ -27,7 +27,7 @@ This section outlines the primary technologies used in the project's architectur
 
 ## 🔗 Project Links
 
-  * **Hosted Link (Demo):** `https://mali-hue-website-pulz-25.vercel.app/`
+  * **Hosted Link (Demo):** https://mali-hue-website-pulz-25.vercel.app/
 
 
 -----
